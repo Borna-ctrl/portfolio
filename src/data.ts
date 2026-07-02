@@ -97,6 +97,6 @@ export const skillGroups: SkillGroup[] = [
   {
     sym: '#!',
     name: 'Tools',
-    items: ['Git', 'Figma', 'Vercel'],
+    items: ['Git', 'Figma', 'Vercel', 'AI-Assisted Dev', 'Claude / LLMs'],
   },
 ]
