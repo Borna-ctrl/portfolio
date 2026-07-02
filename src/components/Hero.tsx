@@ -18,7 +18,7 @@ function PortraitCard() {
       <div className="portrait-media">
         {hasImage ? (
           <img
-            src="/portrait.jpg"
+            src={`${import.meta.env.BASE_URL}portrait.jpg`}
             alt="Borna Nobari"
             loading="lazy"
             onError={() => setHasImage(false)}
