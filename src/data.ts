@@ -21,10 +21,10 @@ export interface SkillGroup {
 
 /** Roles cycled through by the hero typewriter effect. */
 export const ROLES = [
-  'Systems Developer',
+  'Junior Systems Developer',
+  'Junior Fullstack Developer',
   'IT Support & Automation',
-  'Fullstack Developer',
-  'PowerShell Automator',
+  'Systems Development Student',
 ]
 
 /**
