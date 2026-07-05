@@ -25,20 +25,28 @@ export default function Projects() {
                 ))}
               </div>
               <div className="proj-links">
-                <a
-                  className="proj-git"
-                  href="#projects"
-                  aria-label={`${p.title} source on GitHub`}
-                >
-                  [ git ]
-                </a>
-                <a
-                  className="proj-demo"
-                  href="#projects"
-                  aria-label={`${p.title} live demo`}
-                >
-                  live demo →
-                </a>
+                {p.repo && (
+                  <a
+                    className="proj-git"
+                    href={p.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${p.title} source on GitHub`}
+                  >
+                    [ git ]
+                  </a>
+                )}
+                {p.demo && (
+                  <a
+                    className="proj-demo"
+                    href={p.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${p.title} live demo`}
+                  >
+                    live demo →
+                  </a>
+                )}
               </div>
             </div>
           </article>

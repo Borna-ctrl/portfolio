@@ -13,12 +13,12 @@ function PortraitCard() {
         <span className="dot dot-r" aria-hidden="true" />
         <span className="dot dot-y" aria-hidden="true" />
         <span className="dot dot-g" aria-hidden="true" />
-        <span className="term-title">~/portfolio.png</span>
+        <span className="term-title">~/borna.jpg</span>
       </div>
       <div className="portrait-media">
         {hasImage ? (
           <img
-            src={`${import.meta.env.BASE_URL}portfolio.png`}
+            src={`${import.meta.env.BASE_URL}portrait.jpg`}
             alt="Borna Nobari"
             loading="lazy"
             onError={() => setHasImage(false)}

@@ -4,6 +4,10 @@ export interface Project {
   shot: string
   desc: string
   tags: string[]
+  /** Live deployment URL. Omit to hide the "live demo" link. */
+  demo?: string
+  /** Source repository URL. Omit to hide the "[ git ]" link. */
+  repo?: string
 }
 
 export interface Job {
@@ -34,10 +38,12 @@ export const ROLES = [
 export const projects: Project[] = [
   {
     idx: '01',
-    title: 'Project One',
-    shot: 'add screenshot',
-    desc: 'Describe a project you built — the problem it solves, your role, the tech you used, and the outcome.',
-    tags: ['React', 'TypeScript'],
+    title: 'Parkera — Parking Marketplace',
+    shot: 'parkera.app',
+    desc: 'A peer-to-peer parking marketplace for Gothenburg — find a spot near you or rent out your own. Features listing search with location and price filters, a booking-request flow with owner approval, and secure Stripe payments.',
+    tags: ['React', 'Supabase', 'Stripe'],
+    demo: 'https://parkera-delta.vercel.app/',
+    repo: 'https://github.com/Borna-ctrl/Parkera',
   },
   {
     idx: '02',
