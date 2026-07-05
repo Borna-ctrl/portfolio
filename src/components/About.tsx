@@ -25,7 +25,7 @@ export default function About() {
           <div className="tok-comment">// quick.facts</div>
           <div>
             <span className="tok-key">focus</span> ={' '}
-            <span className="tok-str">"IT & Automation"</span>
+            <span className="tok-str">"Always leveling up"</span>
           </div>
           <div>
             <span className="tok-key">location</span> ={' '}
@@ -36,7 +36,7 @@ export default function About() {
             <span className="tok-str">"Högskolan Väst"</span>
           </div>
           <div>
-            <span className="tok-key">coffee</span> ={' '}
+            <span className="tok-key">caffeine</span> ={' '}
             <span className="tok-str">Infinity</span>
           </div>
         </div>

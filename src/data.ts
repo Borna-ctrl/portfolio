@@ -70,6 +70,12 @@ export const projects: Project[] = [
 
 export const jobs: Job[] = [
   {
+    period: '2026 — Present',
+    role: 'Cloud Advisor',
+    company: 'Upheads',
+    desc: 'Hired at Upheads after my internship. I help clients adopt and get the most out of their cloud environments, building on hands-on experience in IT support and automation.',
+  },
+  {
     period: '2025 — 2026',
     role: 'IT Support & Automation Intern',
     company: 'Upheads',
@@ -80,12 +86,6 @@ export const jobs: Job[] = [
     role: 'IT Intern',
     company: 'Goodfellows AB',
     desc: 'Completed an IT internship focused on systems and support. Worked on troubleshooting databases and servers and took part in systems-development tasks.',
-  },
-  {
-    period: '2022 — 2024',
-    role: 'Forklift Operator',
-    company: 'Kappahl Warehouse, Mölndal',
-    desc: 'Full-time forklift operator at Kappahl’s warehouse. Loaded and unloaded pallets, placed goods in their correct spots, and kept the flow of goods running efficiently.',
   },
 ]
 
