@@ -92,11 +92,13 @@ export const projects: Project[] = [
   },
   {
     file: 'FILE-003',
-    year: '—',
-    title: 'Project Three',
-    blurb: 'Classified — awaiting declassification.',
-    desc: 'Describe a project you built — the problem it solves, your role, the tech you used, and the outcome.',
-    tech: ['Node.js', 'SQL'],
+    year: '2025',
+    title: 'Blue Sky nudelkafé',
+    blurb: "Website for Sweden's first self-service noodle café.",
+    desc: "A website for Blue Sky nudelkafé in Gothenburg — Sweden's first self-service noodle café. Presents the menu (noodles, panini, student deals), a photo gallery, opening hours, location and contact. Built with React + Vite.",
+    tech: ['React', 'Vite', 'CSS'],
+    repo: 'https://github.com/Borna-ctrl/blueskycafe',
+    image: 'projects/bluesky.jpg',
   },
   {
     file: 'FILE-004',
