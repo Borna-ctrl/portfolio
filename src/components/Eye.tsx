@@ -37,7 +37,9 @@ export default function Eye({ open, run }: EyeProps) {
   }, [eye])
 
   useEffect(() => {
-    if (!run || reduced) return
+    if (!run) return
+    // Under reduced motion we still let the eye follow the cursor (input-driven,
+    // not autoplaying) but suppress the autonomous idle-darting and blinking.
     let raf = 0
     let prev = performance.now()
     const cur = { x: 0, y: 0 }
@@ -69,7 +71,8 @@ export default function Eye({ open, run }: EyeProps) {
           const mag = Math.min(1, dist / 420) * MAX_OFFSET
           bx = (vx / dist) * mag
           by = (vy / dist) * mag
-        } else {
+        } else if (!reduced) {
+          // idle gaze — drift to random nearby points ("looking around")
           if (now > nextIdle) {
             const a = rand(0, Math.PI * 2)
             const rr = rand(7, 20)
@@ -80,6 +83,7 @@ export default function Eye({ open, run }: EyeProps) {
           bx = idle.x
           by = idle.y
         }
+        // (reduced motion: no recent mouse → gently recenter, bx/by stay 0)
       }
 
       // frame-rate independent smoothing
@@ -87,20 +91,21 @@ export default function Eye({ open, run }: EyeProps) {
       cur.x += (bx - cur.x) * k
       cur.y += (by - cur.y) * k
 
-      // ---- blink (triangle dip over 150ms) ----
-      if (eye.forceBlink) {
-        eye.forceBlink = false
-        blinkStart = now
-      }
-      if (now > nextBlink) {
-        blinkStart = now
-        nextBlink = now + rand(2600, 6000)
-      }
+      // ---- blink (triangle dip over 150ms) — skipped under reduced motion ----
+      const wantBlink = eye.forceBlink
+      eye.forceBlink = false
       let blinkScale = 1
-      if (blinkStart >= 0) {
-        const bt = now - blinkStart
-        if (bt >= 150) blinkStart = -1
-        else blinkScale = 1 - 0.95 * Math.sin((bt / 150) * Math.PI)
+      if (!reduced) {
+        if (wantBlink) blinkStart = now
+        if (now > nextBlink) {
+          blinkStart = now
+          nextBlink = now + rand(2600, 6000)
+        }
+        if (blinkStart >= 0) {
+          const bt = now - blinkStart
+          if (bt >= 150) blinkStart = -1
+          else blinkScale = 1 - 0.95 * Math.sin((bt / 150) * Math.PI)
+        }
       }
 
       // ---- pupil focus / dilate ----
