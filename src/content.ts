@@ -48,7 +48,6 @@ export const about = {
     'PowerShell',
   ],
   metrics: [
-    { num: '1+', label: 'YEARS IN IT' },
     { num: '3', label: 'ROLES · 2 COMPANIES' },
     { num: '∞', label: 'CAFFEINE' },
   ],
@@ -162,9 +161,9 @@ export const skillHubs: SkillHub[] = [
   { cat: 'frontend', label: 'FRONTEND', items: ['React', 'JavaScript', 'Tailwind CSS'] },
   { cat: 'backend', label: 'BACKEND', items: ['Node.js', 'C# / ASP.NET', 'REST APIs'] },
   { cat: 'database', label: 'DATABASE', items: ['SQL', 'MongoDB', 'Supabase'] },
-  { cat: 'cloud', label: 'CLOUD', items: ['Vercel', 'Azure / M365', 'Cloud Support'] },
-  { cat: 'devops', label: 'DEVOPS', items: ['Git', 'PowerShell', 'CI/CD'] },
-  { cat: 'tools', label: 'TOOLS', items: ['Figma', 'Claude / LLMs', 'AI-Assisted Dev'] },
+  { cat: 'cloud', label: 'CLOUD', items: ['Vercel', 'Azure / M365'] },
+  { cat: 'devops', label: 'DEVOPS', items: ['Git', 'PowerShell'] },
+  { cat: 'tools', label: 'TOOLS', items: ['Figma', 'Claude / LLMs'] },
 ]
 
 // ---------- CONTACT ("Open Channel") ----------
