@@ -44,11 +44,19 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         onClick={(e) => e.stopPropagation()}
         style={{ width: 'min(640px, 100%)', maxHeight: '82vh', overflow: 'auto', padding: 0 }}
       >
-        <div className="placeholder-img" style={{ height: 190 }}>
-          <span className="mono" style={{ color: 'var(--fg-faint)', fontSize: 12, letterSpacing: 3 }}>
-            // PROJECT IMAGE
-          </span>
-        </div>
+        {project.image ? (
+          <img
+            src={`${import.meta.env.BASE_URL}${project.image}`}
+            alt={`${project.title} screenshot`}
+            style={{ width: '100%', height: 190, objectFit: 'cover', display: 'block' }}
+          />
+        ) : (
+          <div className="placeholder-img" style={{ height: 190 }}>
+            <span className="mono" style={{ color: 'var(--fg-faint)', fontSize: 12, letterSpacing: 3 }}>
+              // PROJECT IMAGE
+            </span>
+          </div>
+        )}
 
         <div style={{ padding: 26 }}>
           {!decrypted ? (

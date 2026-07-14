@@ -64,6 +64,8 @@ export interface Project {
   tech: string[]
   demo?: string
   repo?: string
+  /** Screenshot path relative to the site base (e.g. "projects/parkera.jpg"). */
+  image?: string
 }
 
 export const projects: Project[] = [
@@ -76,14 +78,17 @@ export const projects: Project[] = [
     tech: ['React', 'Supabase', 'Stripe'],
     demo: 'https://parkera-delta.vercel.app/',
     repo: 'https://github.com/Borna-ctrl/Parkera',
+    image: 'projects/parkera.jpg',
   },
   {
     file: 'FILE-002',
-    year: '—',
-    title: 'Project Two',
-    blurb: 'Classified — awaiting declassification.',
-    desc: 'Describe a project you built — the problem it solves, your role, the tech you used, and the outcome.',
-    tech: ['PowerShell', 'Automation'],
+    year: '2026',
+    title: 'AI Recruiter',
+    blurb: 'AI-driven job matching — a "Tinder for jobs".',
+    desc: 'A personal AI recruiter: upload your CV and the AI builds a structured profile, matches jobs, and presents three job cards at a time. On apply, it drafts a tailored application you review before sending. Hybrid architecture — deterministic workflows as the backbone, LLM agents only where they add value.',
+    tech: ['Next.js', 'FastAPI', 'LangGraph', 'Claude'],
+    demo: 'https://ai-recruiter-wine-nu.vercel.app/',
+    image: 'projects/ai-recruiter.jpg',
   },
   {
     file: 'FILE-003',

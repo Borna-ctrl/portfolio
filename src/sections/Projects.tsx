@@ -28,10 +28,22 @@ export default function Projects() {
             onClick={() => setOpen(p)}
             {...dilateHandlers(eye)}
           >
-            <div className="placeholder-img proj-thumb" style={{ height: 150 }}>
-              <span className="mono" style={{ color: 'var(--fg-faint)', fontSize: 11, letterSpacing: 3 }}>
-                // PROJECT IMAGE
-              </span>
+            <div style={{ height: 150, overflow: 'hidden' }}>
+              {p.image ? (
+                <img
+                  className="proj-thumb"
+                  src={`${import.meta.env.BASE_URL}${p.image}`}
+                  alt={`${p.title} screenshot`}
+                  loading="lazy"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              ) : (
+                <div className="placeholder-img proj-thumb" style={{ height: '100%' }}>
+                  <span className="mono" style={{ color: 'var(--fg-faint)', fontSize: 11, letterSpacing: 3 }}>
+                    // PROJECT IMAGE
+                  </span>
+                </div>
+              )}
             </div>
             <div style={{ padding: 20 }}>
               <div
