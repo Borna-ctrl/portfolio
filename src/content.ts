@@ -103,11 +103,13 @@ export const projects: Project[] = [
   },
   {
     file: 'FILE-004',
-    year: '—',
-    title: 'Project Four',
-    blurb: 'Classified — awaiting declassification.',
-    desc: 'Describe a project you built — the problem it solves, your role, the tech you used, and the outcome.',
-    tech: ['Supabase', 'REST API'],
+    year: '2026',
+    title: 'Spelsamlingen',
+    blurb: 'ASP.NET Core MVC — CRUD + a leaderboard from a REST API.',
+    desc: 'An ASP.NET Core (.NET 9) MVC website in two parts: a game collection with full CRUD against a SQLite database via Entity Framework (with a foreign-key relationship between games and platforms), and a leaderboard populated from a separate REST WebAPI that has its own database. A web-development school project.',
+    tech: ['ASP.NET Core', 'C#', 'EF Core', 'SQLite', 'REST API'],
+    repo: 'https://github.com/Borna-ctrl/Spelsamling',
+    image: 'projects/spelsamling.jpg',
   },
 ]
 
