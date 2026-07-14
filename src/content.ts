@@ -97,6 +97,7 @@ export const projects: Project[] = [
     blurb: "Website for Sweden's first self-service noodle café.",
     desc: "A website for Blue Sky nudelkafé in Gothenburg — Sweden's first self-service noodle café. Presents the menu (noodles, panini, student deals), a photo gallery, opening hours, location and contact. Built with React + Vite.",
     tech: ['React', 'Vite', 'CSS'],
+    demo: 'https://borna-ctrl.github.io/blueskycafe/',
     repo: 'https://github.com/Borna-ctrl/blueskycafe',
     image: 'projects/bluesky.jpg',
   },
