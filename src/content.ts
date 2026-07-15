@@ -110,6 +110,16 @@ export const projects: Project[] = [
     repo: 'https://github.com/Borna-ctrl/Spelsamling',
     image: 'projects/spelsamling.jpg',
   },
+  {
+    file: 'FILE-005',
+    year: '2025',
+    title: 'Lilians Jewelry',
+    blurb: 'WooCommerce shop for a Gothenburg goldsmith.',
+    desc: 'A WordPress + WooCommerce website for Lilians Jewelry, a goldsmith in Gothenburg specialising in custom engagement and wedding rings in 18K gold. Includes an online shop, consultation booking, jewelry repair and "sell your gold" pages. Built for a real client who runs their business on it today.',
+    tech: ['WordPress', 'WooCommerce', 'PHP', 'CSS'],
+    demo: 'https://liliansjewelry.se/',
+    image: 'projects/lilians.jpg',
+  },
 ]
 
 // ---------- EXPERIENCE ("Operational History") ----------
